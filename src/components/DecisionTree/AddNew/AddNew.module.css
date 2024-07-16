@@ -35,8 +35,8 @@
   color: #272340;
   font-size: 20px;
   line-height: 36px;
-  font-weight: 500;
-  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+  font-weight: 600; /* Semi-bold */
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Inter, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   position: absolute;
   left: calc(50% - -1.5px);

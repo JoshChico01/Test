@@ -12,9 +12,10 @@ import { Notifications } from './Notifications/Notifications.js';
 
 interface Props {
   className?: string;
+  setCurrentView: (view: string) => void;
 }
 /* @figmaId 901:148030 */
-export const DecisionTree: FC<Props> = memo(function DecisionTree(props = {}) {
+export const DecisionTree: FC<Props> = memo(function DecisionTree(props) {
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
       <div className={classes.topAppBar}>
@@ -49,7 +50,10 @@ export const DecisionTree: FC<Props> = memo(function DecisionTree(props = {}) {
       </div>
       <div className={classes.trees}>
         <div className={classes.frame36}>
-          <Master classes={{ line3: classes.line3 }} />
+          <Master 
+            classes={{ line3: classes.line3 }}
+            text={{name: <a href='#' onClick={() => props.setCurrentView('showTree')} className={classes.name2}>Master</a>}}
+          />
           <Master
             classes={{ line3: classes.line32 }}
             text={{
@@ -60,7 +64,8 @@ export const DecisionTree: FC<Props> = memo(function DecisionTree(props = {}) {
               theMasterDecisionTreeCurrently: (
                 <div className={classes.theMasterDecisionTreeCurrently}>Accurate asthma criteria changes</div>
               ),
-              name: <div className={classes.name}>Asthma Changes</div>,
+              // name: <div className={classes.name}>Asthma Changes</div>,
+              name: <a href='#' onClick={() => props.setCurrentView('showTree')} className={classes.name2}>Asthma Changes</a>
             }}
           />
           <Master
@@ -73,7 +78,7 @@ export const DecisionTree: FC<Props> = memo(function DecisionTree(props = {}) {
               theMasterDecisionTreeCurrently: (
                 <div className={classes.theMasterDecisionTreeCurrently2}>More rigorous social criteria</div>
               ),
-              name: <div className={classes.name2}>Social Criteria Edits</div>,
+              name: <a href='#' onClick={() => props.setCurrentView('showTree')} className={classes.name2}>Social Criteria Edits</a>,
             }}
           />
           <AddNew />

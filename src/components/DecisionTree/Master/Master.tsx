@@ -19,7 +19,7 @@ interface Props {
   };
 }
 /* @figmaId 901:79450 */
-export const Master: FC<Props> = memo(function Master(props = {}) {
+export const Master: FC<Props> = memo(function Master(props) {
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
       <div className={classes.rectangle105}></div>

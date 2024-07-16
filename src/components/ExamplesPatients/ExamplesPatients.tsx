@@ -17,6 +17,7 @@ import { Stars } from './Stars/Stars.js';
 import { All1 } from '../All1/All1.js';
 import { PatientSocial } from '../PatientSocial/PatientSocial.js';
 import { PatientMedical } from '../PatientMedical/PatientMedical.js';
+import { DecisionTree } from '../DecisionTree/DecisionTree';
 
 
 interface Props {
@@ -50,6 +51,16 @@ export const ExamplesPatients: FC<Props> = memo(function ExamplesPatients(props 
         {currentView === 'showGeneralMedical' && (
           <div className={classes.patientSocial}>
             <PatientMedical setCurrentView={setCurrentView} />
+          </div>
+        )}
+        {currentView === 'showDecisionTree' && (
+          <div className={classes.patientSocial}>
+            <DecisionTree setCurrentView={setCurrentView} />
+          </div>
+        )}
+        {currentView === 'showTree' && (
+          <div className={classes.patientSocial}>
+            <DecisionTree setCurrentView={setCurrentView} />
           </div>
         )}
       </div>
