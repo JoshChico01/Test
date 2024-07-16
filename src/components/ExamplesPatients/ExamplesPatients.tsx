@@ -58,6 +58,7 @@ export const ExamplesPatients: FC<Props> = memo(function ExamplesPatients(props 
             <DecisionTree setCurrentView={setCurrentView} />
           </div>
         )}
+        {/* Add Svelteflow here */}
         {currentView === 'showTree' && (
           <div className={classes.patientSocial}>
             <DecisionTree setCurrentView={setCurrentView} />
