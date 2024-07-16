@@ -38,6 +38,7 @@ interface Props {
     label3?: ReactNode;
     label4?: ReactNode;
   };
+  currentNav?: string;
 }
 /* @figmaId 616:707 */
 export const NavigationRail_AlignmentTop: FC<Props> = memo(function NavigationRail_AlignmentTop(props = {}) {
@@ -63,6 +64,7 @@ export const NavigationRail_AlignmentTop: FC<Props> = memo(function NavigationRa
         )}
       </div>
       <div className={classes.destinations}>
+        {props.currentNav === 'navPatient' ? (
         <BuildingBlocksNavItem_Selected
           className={classes.navItem1}
           swap={{
@@ -77,8 +79,40 @@ export const NavigationRail_AlignmentTop: FC<Props> = memo(function NavigationRa
           text={{
             label: props.text?.label || <div className={classes.label}>Mail</div>,
           }}
+        />) :(
+          <BuildingBlocksNavItem_Selected2
+          className={classes.navItem1}
+          swap={{
+            icon: props.swap?.icon || (
+              <Mail
+                swap={{
+                  icon: <Icon2 className={classes.icon2} />,
+                }}
+              />
+            ),
+          }}
+          text={{
+            label: props.text?.label || <div className={classes.label}>Mail</div>,
+          }}
         />
-        <BuildingBlocksNavItem_Selected2
+        )}
+        {props.currentNav === 'navDecisionTree' ? (
+        <BuildingBlocksNavItem_Selected
+          className={classes.navItem2}
+          swap={{
+            icon: props.swap?.icon2 || (
+              <Chat_bubble
+                swap={{
+                  icon: <Icon3 className={classes.icon3} />,
+                }}
+              />
+            ),
+          }}
+          text={{
+            label: props.text?.label2 || <div className={classes.label2}>Chat</div>,
+          }}
+        />) : (
+          <BuildingBlocksNavItem_Selected2
           className={classes.navItem2}
           swap={{
             icon: props.swap?.icon2 || (
@@ -93,6 +127,7 @@ export const NavigationRail_AlignmentTop: FC<Props> = memo(function NavigationRa
             label: props.text?.label2 || <div className={classes.label2}>Chat</div>,
           }}
         />
+        )}
         <BuildingBlocksNavItem_Selected2
           className={classes.navItem3}
           swap={{

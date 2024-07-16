@@ -1,5 +1,4 @@
-import { memo } from 'react';
-import type { FC } from 'react';
+import React, { FC, memo, useState } from 'react';
 
 import resets from '../_resets.module.css';
 import classes from './All1.module.css';
@@ -97,9 +96,10 @@ interface Props {
     checkboxNeutral9?: boolean;
     loremIpsumDolorSitAmetConsecte9?: boolean;
   };
+  setCurrentView: (view: string) => void;
 }
 /* @figmaId 650:2400 */
-export const All1: FC<Props> = memo(function All1(props = {}) {
+export const All1: FC<Props> = memo(function All1(props) {
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
       <div className={classes.rectangle44}>
@@ -205,7 +205,10 @@ export const All1: FC<Props> = memo(function All1(props = {}) {
           <div className={classes.userName}>Justin Septimus</div>
           <div className={classes.emailID}>UMRN</div>
           <div className={classes.rectangle93}></div>
-          <div className={classes.openDetails}>Open Details</div>
+          {/* <div className={classes.openDetails}>Open Details</div> */}
+          <a href="#" className={classes.openDetails} onClick={() => props.setCurrentView('showPatientSocial')}>
+            Open Details
+          </a>
           <IconMaster
             className={classes.iconMaster}
             classes={{ union: classes.union }}

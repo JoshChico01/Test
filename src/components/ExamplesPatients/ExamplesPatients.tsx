@@ -1,5 +1,4 @@
-import { memo } from 'react';
-import type { FC } from 'react';
+import React, { FC, memo, useState } from 'react';
 
 import resets from '../_resets.module.css';
 import { BackIcon } from './BackIcon.js';
@@ -15,6 +14,9 @@ import { NavigationRail_AlignmentTop } from './NavigationRail_AlignmentTop/Navig
 import { RefreshIcon } from './RefreshIcon.js';
 import { StarIcon } from './StarIcon.js';
 import { Stars } from './Stars/Stars.js';
+import { All1 } from '../All1/All1.js';
+import { PatientSocial } from '../PatientSocial/PatientSocial.js';
+
 
 interface Props {
   className?: string;
@@ -24,29 +26,62 @@ interface Props {
 }
 /* @figmaId 872:5086 */
 export const ExamplesPatients: FC<Props> = memo(function ExamplesPatients(props = {}) {
+  const [currentView, setCurrentView] = useState('showAll');
+  const [activeNav, setCurrentNav] = useState('navPatient');
+
+  const handleClick = (view: string, nav: string) => {
+    setCurrentView(view);
+    setCurrentNav(nav);
+  };
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
       <div className={classes.content}>
-        <div className={classes.frame32}>
-          <div className={classes.mainContent}>Main content</div>
-        </div>
+        {currentView === 'showAll' && (
+          <div className={classes.All}>
+            <All1 setCurrentView={setCurrentView} />
+          </div>
+        )}
+        {currentView === 'showPatientSocial' && (
+          <div className={classes.patientSocial}>
+            <PatientSocial />
+          </div>
+        )}
+        {/* {currentView === 'showPatientGM' && (
+          <div className={classes.patientSocial}>
+            <PatientGM />
+          </div>
+        )} */}
       </div>
       <NavigationRail_AlignmentTop
         className={classes.navigationRail}
         swap={{
           icon: (
-            <Stars
-              swap={{
-                icon: <Icon className={classes.icon} />,
-              }}
-            />
+            <a href="#" onClick={() => handleClick('showAll', 'navPatient')}>
+              <Stars
+                swap={{
+                  icon: <Icon className={classes.icon} />,
+                }}
+              />
+            </a>
+            // <Stars
+            //   swap={{
+            //     icon: <Icon className={classes.icon} />,
+            //   }}
+            // />
           ),
           icon2: (
-            <Stars
-              swap={{
-                icon: <Icon2 className={classes.icon2} />,
-              }}
-            />
+            <a href="#" onClick={() => handleClick('showDecisionTree', 'navDecisionTree')}>
+              <Stars
+                swap={{
+                  icon: <Icon className={classes.icon2} />,
+                }}
+              />
+            </a>
+            // <Stars
+            //   swap={{
+            //     icon: <Icon2 className={classes.icon2} />,
+            //   }}
+            // />
           ),
           icon3: (
             <Stars
@@ -67,11 +102,14 @@ export const ExamplesPatients: FC<Props> = memo(function ExamplesPatients(props 
           fABElevationOverride: true,
         }}
         text={{
-          label: <div className={classes.patients}>Patients</div>,
-          label2: <div className={classes.label}>Decision Tree</div>,
+          // label: <div className={classes.patients}>Patients</div>,
+          // label2: <div className={classes.label}>Decision Tree</div>,
+          label: <a href="#" onClick={() => handleClick('showAll', 'navPatient')} className={classes.label}>Patients</a>,
+          label2: <a href="#" onClick={() => handleClick('showDecisionTree', 'navDecisionTree')} className={classes.label}>Decision Tree</a>,
           label3: <div className={classes.label2}>Label</div>,
           label4: <div className={classes.label3}>Label</div>,
         }}
+        currentNav= {activeNav}
       />
       <div className={classes.chromeBrowserBar}>
         <div className={classes.icons}>
