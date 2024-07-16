@@ -128,7 +128,7 @@ export const All1: FC<Props> = memo(function All1(props) {
           ),
           loremIpsumDolorSitAmetConsecte2: (
             <div className={classes.loremIpsumDolorSitAmetConsecte4}>
-              Acute Delirium, Requirement for monitoring more frequent than every 2 hours, ...
+              Acute Delirium, Requirement for monitoring more frequent than ...
             </div>
           ),
         }}
@@ -140,6 +140,11 @@ export const All1: FC<Props> = memo(function All1(props) {
           _12APR2020: <div className={classes._8APR2020}>15/APR/2020</div>,
           loremIpsumDolorSitAmetConsecte: (
             <div className={classes.loremIpsumDolorSitAmetConsecte5}>Diagnostic Conditions</div>
+          ),
+          loremIpsumDolorSitAmetConsecte2: (
+            <div className={classes.loremIpsumDolorSitAmetConsecte4}>
+              
+            </div>
           ),
         }}
       />
@@ -206,7 +211,7 @@ export const All1: FC<Props> = memo(function All1(props) {
           <div className={classes.emailID}>UMRN</div>
           <div className={classes.rectangle93}></div>
           {/* <div className={classes.openDetails}>Open Details</div> */}
-          <a href="#" className={classes.openDetails} onClick={() => props.setCurrentView('showPatientSocial')}>
+          <a href="#" className={classes.openDetails} onClick={() => props.setCurrentView('showSocial')}>
             Open Details
           </a>
           <IconMaster
@@ -269,7 +274,10 @@ export const All1: FC<Props> = memo(function All1(props) {
           <div className={classes.alfonso}>Anika Rhiel Madsen</div>
           <div className={classes.emailID2}>UMRN</div>
           <div className={classes.rectangle932}></div>
-          <div className={classes.openDetails2}>Open Details</div>
+          {/* <div className={classes.openDetails2}>Open Details</div> */}
+          <a href="#" className={classes.openDetails} onClick={() => props.setCurrentView('showSocial')}>
+            Open Details
+          </a>
           <IconMaster
             className={classes.iconMaster2}
             classes={{ union: classes.union2 }}

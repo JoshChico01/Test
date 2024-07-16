@@ -54,11 +54,11 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte}>
-                <ol className={classes.list}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock}>Do you have plans to move in the next 5 days?</div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -75,13 +75,13 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte2}>
-                <ol className={classes.list2}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock2}>
                       Do you have plans to move to a Skilled Nursing Facility or Nursing Home in the next 30 days?
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -98,11 +98,11 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte3}>
-                <ol className={classes.list3}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock3}>Are you planning to travel in the next 30 days?</div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -115,14 +115,14 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte4}>
-                <ol className={classes.list4}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock4}>
                       If traveling in the next 30 days, will you be able to accept follow up phone calls from your
                       Recovery Care Coordinator?
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -131,21 +131,21 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ5}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag4, radioNeutralNo2: classes.radioNeutralNo4 }}
           hide={{
-            radioNeutralYesFlag: false,
+            radioNeutralYesFlag: true,
             radioNeutralNo: false,
-            radioNeutralYes: true,
+            radioNeutralYes: false,
             radioNeutralNoFlag: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte5}>
-                <ol className={classes.list5}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock5}>
                       Are there any special instructions for getting into your home?
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -159,13 +159,13 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
             amount4: <div className={classes.amount4}>Bedside Commode</div>,
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte6}>
-                <ol className={classes.list6}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock6}>
                       Do you use any durable medical equipment to help you in your home?
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -183,30 +183,37 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte7}>
-                <ol className={classes.list7}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock7}>
                       Do you or anyone in your home use or is involved in the selling of recreational/illicit drugs?
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
         />
         <YesNoQ
-          className={classes.yesNoQ7}
+          className={classes.yesNoQ6}
+          classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag5, radioNeutralNo2: classes.radioNeutralNo5 }}
+          hide={{
+            radioNeutralYesFlag: true,
+            radioNeutralNo: true,
+            radioNeutralYes: false,
+            radioNeutralNoFlag: false,
+          }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
-              <div className={classes.loremIpsumDolorSitAmetConsecte8}>
-                <ol className={classes.list8}>
-                  <li>
-                    <div className={classes.textBlock8}>
+              <div className={classes.loremIpsumDolorSitAmetConsecte7}>
+                
+                  
+                    <div className={classes.textBlock7}>
                       Are you comfortable with health care professionals making multiple daily visits to your home? This
                       includes but is not limited to nurses, x-ray technicians, or EMTs.
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -216,14 +223,14 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte9}>
-                <ol className={classes.list9}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock9}>
                       If other people live in your home, are they comfortable with health care professionals making
                       multiple daily visits to your home?
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -233,14 +240,14 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte10}>
-                <ol className={classes.list10}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock10}>
                       Do you have a working home telephone or mobile phone available 24/7 with which you could call the
                       Hospital at Home team in case of an emergency?
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -250,25 +257,25 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte11}>
-                <ol className={classes.list11}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock11}>Does your home have:</div>
-                  </li>
-                </ol>
+                  
+                
                 <ul className={classes.list12}>
-                  <li>
+                  
                     <div className={classes.textBlock12}>
                       <p className={classes.labelWrapper}>
                         <span className={classes.label}>Electricity</span>
                       </p>
                     </div>
-                  </li>
-                  <li>
+                  
+                  
                     <div className={classes.textBlock13}>Running water</div>
-                  </li>
-                  <li>
+                  
+                  
                     <div className={classes.textBlock14}>Access to refrigeration</div>
-                  </li>
+                  
                 </ul>
               </div>
             ),
@@ -280,15 +287,16 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           hide={{
             radioNeutralNo: false,
             radioNeutralNoFlag: true,
+            flagged: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte12}>
-                <ol className={classes.list13}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock15}>Do you live alone?</div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -304,13 +312,13 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
             amount3: <div className={classes.amount7}>be able to answer medical calls</div>,
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte13}>
-                <ol className={classes.list14}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock16}>
                       If you are not living alone, is the person living with you:
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}

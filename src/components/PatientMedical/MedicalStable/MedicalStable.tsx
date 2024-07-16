@@ -2,13 +2,14 @@ import { memo } from 'react';
 import type { FC } from 'react';
 
 import resets from '../../_resets.module.css';
-import { CheckboxNeutral } from '../CheckboxNeutral/CheckboxNeutral.js';
-import { RadioActiveFlagged } from '../RadioActiveFlagged/RadioActiveFlagged.js';
-import { RadioNeutralNo } from '../RadioNeutralNo/RadioNeutralNo.js';
-import { RadioNeutralNoFlag } from '../RadioNeutralNoFlag/RadioNeutralNoFlag.js';
-import { RadioNeutralYes } from '../RadioNeutralYes/RadioNeutralYes.js';
-import { RadioNeutralYesFlag } from '../RadioNeutralYesFlag/RadioNeutralYesFlag.js';
-import { YesNoQ } from '../YesNoQ/YesNoQ.js';
+import { CheckboxNeutral } from '../../PatientSocial/CheckboxNeutral/CheckboxNeutral';
+import { RadioActiveFlagged } from '../../PatientSocial/RadioActiveFlagged/RadioActiveFlagged';
+import { RadioNeutralNo } from '../../PatientSocial/RadioNeutralNo/RadioNeutralNo';
+import { RadioNeutralNoFlag } from '../../PatientSocial/RadioNeutralNoFlag/RadioNeutralNoFlag';
+import { RadioNeutralYes } from '../../PatientSocial/RadioNeutralYes/RadioNeutralYes';
+import { RadioNeutralYesFlag } from '../../PatientSocial/RadioNeutralYesFlag/RadioNeutralYesFlag';
+// import { YesNoQ } from '../YesNoQ/YesNoQ.js';
+import { YesNoQ } from '../../PatientSocial/YesNoQ/YesNoQ';
 import classes from './MedicalStable.module.css';
 
 interface Props {
@@ -64,11 +65,11 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte}>
-                <ol className={classes.list}>
-                  <li>
+                
+                   
                     <div className={classes.textBlock}>COPD with unstable severe cardiac comorbidities</div>
-                  </li>
-                </ol>
+                   
+                
               </div>
             ),
           }}
@@ -85,11 +86,11 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte2}>
-                <ol className={classes.list2}>
-                  <li>
+                 
+                   
                     <div className={classes.textBlock2}>Arterial blood gas measurements required</div>
-                  </li>
-                </ol>
+                   
+                
               </div>
             ),
           }}
@@ -102,15 +103,16 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
             radioNeutralNo: false,
             radioNeutralYes: true,
             radioNeutralNoFlag: true,
+            flagged: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte3}>
-                <ol className={classes.list3}>
-                  <li>
+                 
+                   
                     <div className={classes.textBlock3}>Required cardiac monitoring or intensive care</div>
-                  </li>
-                </ol>
+                   
+                
               </div>
             ),
           }}
@@ -128,11 +130,11 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte4}>
-                <ol className={classes.list4}>
-                  <li>
+                 
+                   
                     <div className={classes.textBlock4}>Need for mechanical ventilation</div>
-                  </li>
-                </ol>
+                   
+                
               </div>
             ),
           }}
@@ -149,11 +151,11 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte5}>
-                <ol className={classes.list5}>
-                  <li>
+                 
+                   
                     <div className={classes.textBlock5}>On methadone requiring daily pickup of medication</div>
-                  </li>
-                </ol>
+                   
+                
               </div>
             ),
           }}
@@ -170,11 +172,11 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte6}>
-                <ol className={classes.list6}>
-                  <li>
+                 
+                   
                     <div className={classes.textBlock6}>Active drug abuse</div>
-                  </li>
-                </ol>
+                   
+                
               </div>
             ),
           }}
@@ -191,11 +193,11 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte7}>
-                <ol className={classes.list7}>
-                  <li>
+                 
+                   
                     <div className={classes.textBlock7}>Active drug abuse</div>
-                  </li>
-                </ol>
+                   
+                
               </div>
             ),
           }}
@@ -204,11 +206,11 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
           <div className={classes.rectangle84}></div>
           <div className={classes.frame13}>
             <div className={classes.secondaryCondition}>
-              <ol className={classes.list8}>
-                <li>
+               
+                 
                   <div className={classes.textBlock8}>Secondary condition</div>
-                </li>
-              </ol>
+                 
+              
             </div>
             <CheckboxNeutral
               className={classes.checkboxNeutral}
@@ -256,13 +258,13 @@ export const MedicalStable: FC<Props> = memo(function MedicalStable(props = {}) 
           <div className={classes.rectangle842}></div>
           <div className={classes.frame132}>
             <div className={classes.severeImmunosuppressionNotAuto}>
-              <ol className={classes.list9}>
-                <li>
+               
+                 
                   <div className={classes.textBlock9}>
                     Severe immunosuppression (not auto reject, need to be discussed with the medical team)
                   </div>
-                </li>
-              </ol>
+                 
+              
             </div>
             <CheckboxNeutral
               className={classes.checkboxNeutral7}

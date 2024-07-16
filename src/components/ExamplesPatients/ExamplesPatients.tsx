@@ -16,6 +16,7 @@ import { StarIcon } from './StarIcon.js';
 import { Stars } from './Stars/Stars.js';
 import { All1 } from '../All1/All1.js';
 import { PatientSocial } from '../PatientSocial/PatientSocial.js';
+import { PatientMedical } from '../PatientMedical/PatientMedical.js';
 
 
 interface Props {
@@ -41,16 +42,16 @@ export const ExamplesPatients: FC<Props> = memo(function ExamplesPatients(props 
             <All1 setCurrentView={setCurrentView} />
           </div>
         )}
-        {currentView === 'showPatientSocial' && (
+        {currentView === 'showSocial' && (
           <div className={classes.patientSocial}>
-            <PatientSocial />
+            <PatientSocial setCurrentView={setCurrentView} />
           </div>
         )}
-        {/* {currentView === 'showPatientGM' && (
+        {currentView === 'showGeneralMedical' && (
           <div className={classes.patientSocial}>
-            <PatientGM />
+            <PatientMedical setCurrentView={setCurrentView} />
           </div>
-        )} */}
+        )}
       </div>
       <NavigationRail_AlignmentTop
         className={classes.navigationRail}

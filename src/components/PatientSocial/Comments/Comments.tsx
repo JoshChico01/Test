@@ -30,12 +30,17 @@ export const Comments: FC<Props> = memo(function Comments(props = {}) {
         <RadioNeutralYesFlag className={classes.radioNeutralYesFlag} />
         <RadioNeutralNo className={classes.radioNeutralNo} />
       </div>
-      <div className={classes.rectangle195}></div>
-      <div className={classes.rectangle98}></div>
-      <div className={classes.frame31}>
-        <RadioNeutralNo className={classes.radioNeutralNo2} />
-        <RadioActiveFlagged className={classes.radioActiveFlagged} />
-      </div>
+      {props.hide?.flagged && (
+        <div>
+          <div className={classes.rectangle195}></div>
+          <div className={classes.rectangle98}></div>
+          <div className={classes.frame31}>
+            <RadioNeutralNo className={classes.radioNeutralNo2} />
+            <RadioActiveFlagged className={classes.radioActiveFlagged} />
+          </div>
+        </div>
+      )}
+      
       <div className={classes.frame13}>
         <div className={classes.rectangle196}></div>
         <div className={classes.clickToInsertText}>Click to insert text</div>

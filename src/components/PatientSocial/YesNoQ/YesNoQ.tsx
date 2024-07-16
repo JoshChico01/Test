@@ -40,12 +40,16 @@ export const YesNoQ: FC<Props> = memo(function YesNoQ(props = {}) {
         {!props.hide?.radioNeutralYes && <RadioNeutralYes className={classes.radioNeutralYes} />}
         {!props.hide?.radioNeutralNoFlag && <RadioNeutralNoFlag className={classes.radioNeutralNoFlag} />}
       </div>
-      <div className={classes.rectangle195}></div>
-      <div className={classes.rectangle98}></div>
-      <div className={classes.frame30}>
-        <RadioActiveFlagged className={classes.radioActiveFlagged} />
-        <RadioNeutralNo className={classes.radioNeutralNo} />
-      </div>
+      {props.hide?.flagged && (
+        <div>
+          <div className={classes.rectangle195}></div>
+          <div className={classes.rectangle98}></div>
+          <div className={classes.frame30}>
+            <RadioActiveFlagged className={classes.radioActiveFlagged} />
+            <RadioNeutralNo className={classes.radioNeutralNo} />
+          </div>
+        </div>
+      )}
       {props.text?.loremIpsumDolorSitAmetConsecte != null ? (
         props.text?.loremIpsumDolorSitAmetConsecte
       ) : (

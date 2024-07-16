@@ -2,15 +2,23 @@ import { memo } from 'react';
 import type { FC, ReactNode } from 'react';
 
 import resets from '../../_resets.module.css';
-import { CheckboxNeutral } from '../CheckboxNeutral/CheckboxNeutral.js';
-import { RadioActiveFlagged } from '../RadioActiveFlagged/RadioActiveFlagged.js';
-import { RadioNeutralNo } from '../RadioNeutralNo/RadioNeutralNo.js';
-import { RadioNeutralNoFlag } from '../RadioNeutralNoFlag/RadioNeutralNoFlag.js';
-import { RadioNeutralYes } from '../RadioNeutralYes/RadioNeutralYes.js';
-import { RadioNeutralYesFlag } from '../RadioNeutralYesFlag/RadioNeutralYesFlag.js';
-import { YesNoQ } from '../YesNoQ/YesNoQ.js';
+// import { CheckboxNeutral } from '../CheckboxNeutral/CheckboxNeutral.js';
+// import { RadioActiveFlagged } from '../RadioActiveFlagged/RadioActiveFlagged.js';
+// import { RadioNeutralNo } from '../RadioNeutralNo/RadioNeutralNo.js';
+// import { RadioNeutralNoFlag } from '../RadioNeutralNoFlag/RadioNeutralNoFlag.js';
+// import { RadioNeutralYes } from '../RadioNeutralYes/RadioNeutralYes.js';
+// import { RadioNeutralYesFlag } from '../RadioNeutralYesFlag/RadioNeutralYesFlag.js';
+// import { YesNoQ } from '../YesNoQ/YesNoQ.js';
 import classes from './MedicalAcute.module.css';
 import { RadioIcon } from './RadioIcon.js';
+
+import { CheckboxNeutral } from '../../PatientSocial/CheckboxNeutral/CheckboxNeutral';
+import { RadioActiveFlagged } from '../../PatientSocial/RadioActiveFlagged/RadioActiveFlagged';
+import { RadioNeutralNo } from '../../PatientSocial/RadioNeutralNo/RadioNeutralNo';
+import { RadioNeutralNoFlag } from '../../PatientSocial/RadioNeutralNoFlag/RadioNeutralNoFlag';
+import { RadioNeutralYes } from '../../PatientSocial/RadioNeutralYes/RadioNeutralYes';
+import { RadioNeutralYesFlag } from '../../PatientSocial/RadioNeutralYesFlag/RadioNeutralYesFlag';
+import { YesNoQ } from '../../PatientSocial/YesNoQ/YesNoQ';
 
 interface Props {
   className?: string;
@@ -38,10 +46,6 @@ interface Props {
     radioNeutralNoFlag5?: boolean;
     flagged2?: boolean;
   };
-  text?: {
-    amount?: ReactNode;
-    amount2?: ReactNode;
-  };
 }
 /* @figmaId 689:6561 */
 export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
@@ -63,11 +67,10 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte}>
-                <ol className={classes.list}>
-                  <li>
+                  
                     <div className={classes.textBlock}>Acute delirium</div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -84,14 +87,14 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte2}>
-                <ol className={classes.list2}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock2}>
                       Hypoxemia with oxygen saturation &lt; 90% or PO2 &lt; 60 mm Hg uncorrected with &lt; 6 liters per
                       minute oxygen supplementation by nasal cannula
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -104,17 +107,18 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
             radioNeutralNo: false,
             radioNeutralYes: true,
             radioNeutralNoFlag: true,
+            flagged: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte3}>
-                <ol className={classes.list3}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock3}>
                       Bronchodilator (nebulizer) treatments required every 2 hours or more frequently
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -131,11 +135,11 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte4}>
-                <ol className={classes.list4}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock4}>Septic shock</div>
-                  </li>
-                </ol>
+                  
+                
               </div>
             ),
           }}
@@ -153,28 +157,26 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte5}>
-                <ol className={classes.list5}>
-                  <li>
+                
+                  
                     <div className={classes.textBlock5}>
                       Requirement for monitoring more frequent than every 2 hours
                     </div>
-                  </li>
-                </ol>
+                  
+                
               </div>
-            ),
-            amount: props.text?.amount,
-            amount2: props.text?.amount2,
+            )
           }}
         />
         <div className={classes.mCQ}>
           <div className={classes.rectangle84}></div>
           <div className={classes.frame13}>
             <div className={classes.requireAnyOfTheFollowingProced}>
-              <ol className={classes.list6}>
-                <li>
+              
+                
                   <div className={classes.textBlock6}>Require any of the following procedures:</div>
-                </li>
-              </ol>
+                
+              
             </div>
             <CheckboxNeutral
               className={classes.checkboxNeutral}

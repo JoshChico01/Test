@@ -108,9 +108,9 @@
 }
 .patientSocial{
   flex-grow: 1; /* Allow the scrollableContent to take up available space */
-  max-height: 750px; /* Set a max-height to make it scrollable */
+  max-height: 760px; /* Set a max-height to make it scrollable */
   overflow: auto; /* Enable scrolling for overflow content */
-  margin-left: 100px;
+  margin-left: 70px;
   margin-top: 60px;
 }
 .chromeBrowserBar {

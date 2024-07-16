@@ -36,9 +36,10 @@ interface Props {
     radioNeutralNoFlag6?: boolean;
     checkboxNeutral?: boolean;
   };
+  setCurrentView: (view: string) => void;
 }
 /* @figmaId 863:5842 */
-export const PatientSocial: FC<Props> = memo(function PatientSocial(props = {}) {
+export const PatientSocial: FC<Props> = memo(function PatientSocial(props) {
   return (
     <div className={`${resets.clapyResets} ${classes.root}`}>
       <div className={classes.rectangle197}></div>
@@ -47,16 +48,22 @@ export const PatientSocial: FC<Props> = memo(function PatientSocial(props = {}) 
           <div className={classes.done}>DONE</div>
           <div className={classes.frame26}>
             <div className={classes.group92}>
-              <div className={classes.socialConditions}>Social Conditions</div>
+              {/* <div className={classes.socialConditions}>Social Conditions</div> */}
+              <a href="#" className={classes.socialConditions} onClick={() => props.setCurrentView('showSocial')}>
+                Social Conditions
+              </a>
               <div className={classes.rectangle103}></div>
             </div>
-            <div className={classes.generalMedicalConditions}>General Medical Conditions</div>
+            {/* <div className={classes.generalMedicalConditions}>General Medical Conditions</div> */}
+            <a href="#" className={classes.generalMedicalConditions} onClick={() => props.setCurrentView('showGeneralMedical')}>
+              General Medical Conditions
+            </a>
             <div className={classes.diagnosticConditions}>Diagnostic Conditions</div>
           </div>
         </div>
         <CommentFrame
           hide={{
-            flagged: true,
+            flagged: false,
           }}
         />
         <Social />
