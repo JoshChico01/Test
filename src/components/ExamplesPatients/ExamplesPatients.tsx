@@ -18,6 +18,7 @@ import { All1 } from '../All1/All1.js';
 import { PatientSocial } from '../PatientSocial/PatientSocial.js';
 import { PatientMedical } from '../PatientMedical/PatientMedical.js';
 import { DecisionTree } from '../DecisionTree/DecisionTree';
+import { Tree } from '../Tree/Tree.svelte'
 
 
 interface Props {
