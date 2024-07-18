@@ -250,9 +250,10 @@
 
         graphs = !graphs
         console.log(graphs)
+    }
 
-        
-
+    function pageBack() {
+        console.log("Go Back")
     }
 
 </script>
@@ -269,26 +270,33 @@
             
     </SvelteFlow>
     {#if (editting)}
-    <div class="editor">
-        <button class="close" on:click={closeEdit}>&#x274c</button>
-        <h3 class="edit_header">Node Editor</h3>
-        <p class="edit_label">Names: <input class="text_input" bind:value={$newLabel} > </p>
+    <div class="editor" style="table">
+        <button class="close" on:click={closeEdit}><p style="padding-left:4px; padding-top:2px">&#x274c</p></button>
+        <h3 class="edit_header" syle="text-align: center">Node Editor</h3>
+        <div style="table-row">   
+            <p class="edit_label" style="table-row; font-size:20px;">Name:</p>
+            <input class="text_input" style="table-row" bind:value={$newLabel} >
+        </div>
+        
         {#if (edit_type == 'node')}
-            <p class="edit_label">End Nodes:</p>
-            <button class="defaultNodes" style="background-color: #00966C" on:click={makeAccepted}>Accepted</button>
-            <button class="defaultNodes" style="background-color: #D9534F" on:click={makeRejected}>Rejected</button>
+            <p class="edit_label" style="table">End Nodes:</p>
+            <div style="table-row">
+                <button class="defaultNodes" style="background-color: #00966C; table-cell" on:click={makeAccepted}><p style="padding-top:6px">Accepted</p></button>
+                <button class="defaultNodes" style="background-color: #D9534F; table-cell" on:click={makeRejected}><p style="padding-top:6px">Rejected</p></button>
+            </div>  
 
         {/if}
-        <button class="done" on:click={updateNode}> &#x2714</button>
+        <button class="done" on:click={updateNode}> <p style ="padding-left:13px; padding-top:7px">&#x2714</p></button>
     </div>
     {/if}
-    <button class="addNode" on:click={addNode}>Add Node</button>
-    <button class="showGraphs" on:click={showGraphs}>Show Graph</button>
+    <button class="addNode" on:click={addNode}><p style = "padding-top:20px; padding-left:10px;width:85%;">Add Node</p></button>
+    <button class="showGraphs" on:click={showGraphs}><p style = "padding-top:20px;padding-left:10px;width:85%;">Show Graph</p></button>
+    <button class="ExportGraph" on:click={exportData}><p style = "padding-top:20px; padding-left:10px;width:85%;">Export Graph</p></button>
+
+    <button class="PageBack" on:click={pageBack}><p style = "padding-top:7px; padding-left:8px;width:85%;">&#8617</p></button>
+
+    <label class="ImportGraph" on:change={importData}>
+        <p style = "padding-top:20px;padding-left:15px;width:100%;">Import Graph</p>
+        <input type="file" accept="application/json" on:change={importData} />
+    </label>
 </div>
-
-<button class="exportButton" on:click={exportData}>Export Data</button>
-
-<label class="importButton" on:change={importData}>
-    Choose file
-    <input type="file" accept="application/json" on:change={importData} />
-</label>

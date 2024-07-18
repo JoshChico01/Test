@@ -3,6 +3,7 @@
   import BarChart from './BarChart.svelte';
   import { writable } from 'svelte/store';
 
+
   
 
   //export let id;
@@ -19,13 +20,16 @@
 
 </script>
 
-<div class="customNode" style="{data.style}">
+<div class="customNode" style="{data.style}; display:table">
   <Handle type="source" position={Position.Bottom} />
-  <Handle type="target" posit ion={Position.Top} />
-  <div class="nodeLabel">{data.label}</div>
-  {#if (data.graph) && (data.label != "Accepted") && (data.label != "Rejected")}
-  <BarChart {barData} />
-  {/if}
+  <Handle type="target" position={Position.Top} />
+  <div class="nodeLabel" style="table-row">{data.label}</div>
+  <div style="table-row">
+    {#if (data.graph) && (data.label != "Accepted") && (data.label != "Rejected")}
+    <BarChart {barData}/>
+    {/if}
+  </div>
+  
 </div>
 
 <style>
@@ -33,6 +37,7 @@
     padding: 12px;
     border-radius: 20px;
     border: 1px solid black;
+    text-align: center;
   }
 
   .nodeLabel {
