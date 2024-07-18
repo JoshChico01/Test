@@ -19,33 +19,10 @@ import { RadioNeutralNoFlag } from '../../PatientSocial/RadioNeutralNoFlag/Radio
 import { RadioNeutralYes } from '../../PatientSocial/RadioNeutralYes/RadioNeutralYes';
 import { RadioNeutralYesFlag } from '../../PatientSocial/RadioNeutralYesFlag/RadioNeutralYesFlag';
 import { YesNoQ } from '../../PatientSocial/YesNoQ/YesNoQ';
+import { MCQ } from '../../PatientSocial/MCQ/MCQ';
 
 interface Props {
   className?: string;
-  hide?: {
-    radioNeutralYesFlag?: boolean;
-    radioNeutralNo?: boolean;
-    radioNeutralYes?: boolean;
-    radioNeutralNoFlag?: boolean;
-    flagged?: boolean;
-    radioNeutralYesFlag2?: boolean;
-    radioNeutralNo2?: boolean;
-    radioNeutralYes2?: boolean;
-    radioNeutralNoFlag2?: boolean;
-    radioNeutralYesFlag3?: boolean;
-    radioNeutralNo3?: boolean;
-    radioNeutralYes3?: boolean;
-    radioNeutralNoFlag3?: boolean;
-    radioNeutralYesFlag4?: boolean;
-    radioNeutralNo4?: boolean;
-    radioNeutralYes4?: boolean;
-    radioNeutralNoFlag4?: boolean;
-    radioNeutralYesFlag5?: boolean;
-    radioNeutralNo5?: boolean;
-    radioNeutralYes5?: boolean;
-    radioNeutralNoFlag5?: boolean;
-    flagged2?: boolean;
-  };
 }
 /* @figmaId 689:6561 */
 export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
@@ -58,19 +35,12 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           className={classes.yesNoQ}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag, radioNeutralNo2: classes.radioNeutralNo }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
-            flagged: false,
+            radioYesRejected: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte}>
-                  
                     <div className={classes.textBlock}>Acute delirium</div>
-                  
-                
               </div>
             ),
           }}
@@ -79,10 +49,7 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           className={classes.yesNoQ2}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag2, radioNeutralNo2: classes.radioNeutralNo2 }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
+            radioYesRejected: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -103,11 +70,7 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           className={classes.yesNoQ3}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag3, radioNeutralNo2: classes.radioNeutralNo3 }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
-            flagged: true,
+            radioYesRejected: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -127,10 +90,7 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           className={classes.yesNoQ4}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag4, radioNeutralNo2: classes.radioNeutralNo4 }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
+            radioYesRejected: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -148,11 +108,7 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
           className={classes.yesNoQ5}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag5, radioNeutralNo2: classes.radioNeutralNo5 }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
-            flagged: props.hide?.flagged2,
+            radioYesRejected: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -168,58 +124,25 @@ export const MedicalAcute: FC<Props> = memo(function MedicalAcute(props = {}) {
             )
           }}
         />
-        <div className={classes.mCQ}>
-          <div className={classes.rectangle84}></div>
-          <div className={classes.frame13}>
-            <div className={classes.requireAnyOfTheFollowingProced}>
-              
-                
-                  <div className={classes.textBlock6}>Require any of the following procedures:</div>
-                
-              
-            </div>
-            <CheckboxNeutral
-              className={classes.checkboxNeutral}
-              text={{
-                amount: <div className={classes.amount}>computed tomography</div>,
-              }}
-            />
-            <CheckboxNeutral
-              className={classes.checkboxNeutral2}
-              text={{
-                amount: <div className={classes.amount2}>magnetic resonance imaging</div>,
-              }}
-            />
-            <CheckboxNeutral
-              className={classes.checkboxNeutral3}
-              text={{
-                amount: <div className={classes.amount3}>endoscopic procedure</div>,
-              }}
-            />
-            <CheckboxNeutral
-              className={classes.checkboxNeutral4}
-              text={{
-                amount: <div className={classes.amount4}>blood transfusion</div>,
-              }}
-            />
-            <CheckboxNeutral
-              className={classes.checkboxNeutral5}
-              text={{
-                amount: <div className={classes.amount5}>cardiac stress test</div>,
-              }}
-            />
-            <CheckboxNeutral
-              className={classes.checkboxNeutral6}
-              text={{
-                amount: <div className={classes.amount6}>surgery</div>,
-              }}
-            />
-          </div>
-          <div className={classes.frame23}>
-            <RadioNeutralYesFlag className={classes.radioNeutralYesFlag6} />
-            <RadioNeutralNo className={classes.radioNeutralNo6} />
-          </div>
-        </div>
+        <MCQ
+          className={classes.mCQ2}
+          hide={{
+            radioYesRejected: true,
+          }}
+          text={{
+            optionList: [
+              "Computed tomography",
+              "Magnetic resonance imaging",
+              "Endoscopic procedure",
+              "Blood transfusion",
+              "Cardiac stress test",
+              "Surgery",
+            ],
+            loremIpsumDolorSitAmetConsecte: (
+              "Require any of the following procedures:"
+            ),
+          }}
+        />
       </div>
     </div>
   );

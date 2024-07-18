@@ -89,16 +89,8 @@ export const PatientMedical: FC<Props> = memo(function PatientMedical(props) {
             <div className={classes.diagnosticConditions}>Diagnostic Conditions</div>
           </div>
         </div>
-        <CommentFrame
-          hide={{
-            flagged: false,
-          }}
-        />
-        <MedicalAcute
-          hide={{
-            flagged2: false,
-          }}
-        />
+        <CommentFrame />
+        <MedicalAcute />
         <MedicalStable />
       </div>
     </div>

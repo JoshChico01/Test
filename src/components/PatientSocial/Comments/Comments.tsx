@@ -50,12 +50,12 @@ export const Comments: FC<Props> = memo(function Comments(props = {}) {
               "Title"
             )}
           </div>
-          {/* <div  className={classes.divComment}>
+          <div  className={classes.divComment}>
             <textarea
               className={classes.commentArea}
               placeholder="Click to insert text"
             />
-          </div> */}
+          </div>
         </div>
         <div className={classes.frame19}>
           <label className={classes.radioOption}>Accept

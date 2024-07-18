@@ -141,21 +141,13 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
         <MCQ
           className={classes.mCQ}
           text={{
-            amount: <div className={classes.amount}>Wheelchair</div>,
-            amount2: <div className={classes.amount2}>Cane</div>,
-            amount3: <div className={classes.amount3}>Transfer Bench</div>,
-            amount4: <div className={classes.amount4}>Bedside Commode</div>,
-            loremIpsumDolorSitAmetConsecte: (
-              <div className={classes.loremIpsumDolorSitAmetConsecte6}>
-                
-                  
-                    <div className={classes.textBlock6}>
-                      Do you use any durable medical equipment to help you in your home?
-                    </div>
-                  
-                
-              </div>
-            ),
+            optionList: [
+              "Wheelchair",
+              "Cane",
+              "Transfer Bench",
+              "Bedside Commode",
+            ],
+            loremIpsumDolorSitAmetConsecte: "Do you use any durable medical equipment to help you in your home?"
           }}
         />
         <YesNoQ
@@ -182,7 +174,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ6}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag5, radioNeutralNo2: classes.radioNeutralNo5 }}
           hide={{
-            radioNoRejected: true
+            radioNoRejected: true,
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -292,22 +284,16 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
         <MCQ
           className={classes.mCQ2}
           hide={{
-            checkboxNeutral: true,
+            radioNoRejected: true,
           }}
           text={{
-            amount: <div className={classes.amount5}>Over 18-year-old</div>,
-            amount2: <div className={classes.amount6}>Can support you daily activities</div>,
-            amount3: <div className={classes.amount7}>be able to answer medical calls</div>,
+            optionList: [
+              "Over 18-year-old",
+              "Can support you daily activities",
+              "Be able to answer medical calls",
+            ],
             loremIpsumDolorSitAmetConsecte: (
-              <div className={classes.loremIpsumDolorSitAmetConsecte13}>
-                
-                  
-                    <div className={classes.textBlock16}>
-                      If you are not living alone, is the person living with you:
-                    </div>
-                  
-                
-              </div>
+              "If you are not living alone, is the person living with you:"
             ),
           }}
         />
