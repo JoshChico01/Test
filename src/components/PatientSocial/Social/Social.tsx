@@ -46,10 +46,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag, radioNeutralNo2: classes.radioNeutralNo }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
+            radioYesRejected: true
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -67,10 +64,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ2}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag2, radioNeutralNo2: classes.radioNeutralNo2 }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
+            radioYesRejected: true
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -90,10 +84,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ3}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag3, radioNeutralNo2: classes.radioNeutralNo3 }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
+            radioYesRejected: true
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -110,7 +101,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
         <YesNoQ
           className={classes.yesNoQ4}
           hide={{
-            flagged: false,
+            radioYesRejected: true
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -131,10 +122,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ5}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag4, radioNeutralNo2: classes.radioNeutralNo4 }}
           hide={{
-            radioNeutralYesFlag: true,
-            radioNeutralNo: false,
-            radioNeutralYes: false,
-            radioNeutralNoFlag: true,
+            // radioYesRejected: true
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -174,11 +162,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ6}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag5, radioNeutralNo2: classes.radioNeutralNo5 }}
           hide={{
-            radioNeutralYesFlag: false,
-            radioNeutralNo: false,
-            radioNeutralYes: true,
-            radioNeutralNoFlag: true,
-            flagged: false,
+            radioYesRejected: true
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -198,10 +182,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ6}
           classes={{ radioNeutralYesFlag: classes.radioNeutralYesFlag5, radioNeutralNo2: classes.radioNeutralNo5 }}
           hide={{
-            radioNeutralYesFlag: true,
-            radioNeutralNo: true,
-            radioNeutralYes: false,
-            radioNeutralNoFlag: false,
+            radioNoRejected: true
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
@@ -220,6 +201,9 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
         />
         <YesNoQ
           className={classes.yesNoQ8}
+          hide={{
+            radioNoRejected: true
+          }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte9}>
@@ -237,6 +221,9 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
         />
         <YesNoQ
           className={classes.yesNoQ9}
+          hide={{
+            radioNoRejected: true
+          }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte10}>
@@ -254,6 +241,9 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
         />
         <YesNoQ
           className={classes.yesNoQ10}
+          hide={{
+            radioNoRejected: true
+          }}
           text={{
             loremIpsumDolorSitAmetConsecte: (
               <div className={classes.loremIpsumDolorSitAmetConsecte11}>
@@ -285,9 +275,7 @@ export const Social: FC<Props> = memo(function Social(props = {}) {
           className={classes.yesNoQ11}
           classes={{ radioNeutralNo2: classes.radioNeutralNo6 }}
           hide={{
-            radioNeutralNo: false,
-            radioNeutralNoFlag: true,
-            flagged: true,
+            radioYesRejected: true
           }}
           text={{
             loremIpsumDolorSitAmetConsecte: (

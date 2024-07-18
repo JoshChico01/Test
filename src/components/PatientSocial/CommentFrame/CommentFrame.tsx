@@ -7,9 +7,6 @@ import classes from './CommentFrame.module.css';
 
 interface Props {
   className?: string;
-  hide?: {
-    flagged?: boolean;
-  };
 }
 /* @figmaId 677:1215 */
 export const CommentFrame: FC<Props> = memo(function CommentFrame(props = {}) {
@@ -18,12 +15,9 @@ export const CommentFrame: FC<Props> = memo(function CommentFrame(props = {}) {
       <div className={classes.rectangle98}></div>
       <Comments
         className={classes.comments}
-        hide={{
-          flagged: props.hide?.flagged,
-        }}
         text={{
-          loremIpsumDolorSitAmetConsecte: (
-            <div className={classes.loremIpsumDolorSitAmetConsecte}>Final Comment and Decision</div>
+          title: (
+            "Final Comment and Decision"
           ),
         }}
       />

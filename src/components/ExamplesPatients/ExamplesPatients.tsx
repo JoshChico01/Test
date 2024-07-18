@@ -18,7 +18,6 @@ import { All1 } from '../All1/All1.js';
 import { PatientSocial } from '../PatientSocial/PatientSocial.js';
 import { PatientMedical } from '../PatientMedical/PatientMedical.js';
 import { DecisionTree } from '../DecisionTree/DecisionTree';
-import { Tree } from '../Tree/Tree.svelte'
 
 
 interface Props {
@@ -61,8 +60,12 @@ export const ExamplesPatients: FC<Props> = memo(function ExamplesPatients(props 
         )}
         {/* Add Svelteflow here */}
         {currentView === 'showTree' && (
+          
           <div className={classes.patientSocial}>
-            <DecisionTree setCurrentView={setCurrentView} />
+            <div id="app"></div>
+            {/* <script type="module" src="../Tree/tree.js"></script> */}
+            <script type="module" src='../Tree/tree.js'></script>
+            {/* <DecisionTree setCurrentView={setCurrentView} /> */}
           </div>
         )}
       </div>
