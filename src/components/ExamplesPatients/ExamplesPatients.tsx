@@ -19,6 +19,7 @@ import { PatientSocial } from '../PatientSocial/PatientSocial.js';
 import { PatientMedical } from '../PatientMedical/PatientMedical.js';
 import { DecisionTree } from '../DecisionTree/DecisionTree';
 
+import { SvelteWrapper } from '../Tree/svelteWrapper'
 
 interface Props {
   className?: string;
@@ -64,7 +65,7 @@ export const ExamplesPatients: FC<Props> = memo(function ExamplesPatients(props 
           <div className={classes.patientSocial}>
             <div id="app"></div>
             {/* <script type="module" src="../Tree/tree.js"></script> */}
-            <script type="module" src='../Tree/tree.js'></script>
+            <SvelteWrapper name = "A"/>
             {/* <DecisionTree setCurrentView={setCurrentView} /> */}
           </div>
         )}

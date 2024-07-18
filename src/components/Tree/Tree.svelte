@@ -9,7 +9,9 @@
 
     const nodeDefaults = {
       sourcePosition: Position.Up,
-      targetPosition: Position.Down
+      targetPosition: Position.Down,
+      type:"custom",      
+      style: "background-color: #C9E4D800;"
     };
 
     const nodeTypes = {
@@ -21,17 +23,16 @@
     let nodes = writable([
         {
             id: '1',
-            data: { label: 'Node 1',graph: true, },
+            data: { label: 'Node 1',graph: true, style: "background-color: #C9E4D8;"},
             type:"custom",
-            position: { x: 100, y: 100 },
-            style: "background-color: #C9E4D800;",            
+            position: { x: 100, y: 100 },            
             ...nodeDefaults
         },
         {
             id: '2',
-            data: { label: 'Node 2',graph: true, },
+            data: { label: 'Node 2',graph: true, style: "background-color: #C9E4D8;"},
+            type:"custom",
             position: { x: 300, y: 300 },
-            style: "background-color:#C9E4D8;",
             ...nodeDefaults
         }
     ]);
@@ -48,6 +49,7 @@
 
     let selectedId = writable(null);
     let newLabel = writable('');
+
 
     function importData(event) {
         const file = event.target.files[0];
@@ -71,7 +73,7 @@
         const newNodeId = ($nodes.length + 1).toString();
         const newNode = {
             id: newNodeId,
-            data: { label: `Node ${newNodeId}` },
+            data: { label: `Node ${newNodeId}`, style: "background-color: #C9E4D8;" },
             position: { x: Math.random() * 400, y: Math.random() * 400 },
             ...nodeDefaults
         };
@@ -123,7 +125,7 @@
             nodes.update(currentNodes => {
                 return currentNodes.map(node => {
                     if (node.id === selectedId) {
-                        return { ...node, data: { ...node.data, label: $newLabel }, style: "background-color:#C9E4D8" };
+                        return { ...node, data: { ...node.data, label: $newLabel, style: "background-color:#C9E4D8" } };
                     }
                     return node;
                 });
@@ -148,7 +150,7 @@
         nodes.update(currentNodes => {
             return currentNodes.map(node => {
                 if (node.id === selectedId) {
-                    return { ...node, data: { ...node.data, label: "Rejected" }, style: "background-color:#D9534F" };
+                    return { ...node, data: { ...node.data, label: "Rejected", style: "background-color:#D9534F" } };
                 }
                 return node;
             });
@@ -160,7 +162,7 @@
         nodes.update(currentNodes => {
             return currentNodes.map(node => {
                 if (node.id === selectedId) {
-                    return { ...node, data: { ...node.data, label: "Accepted" }, style: "background-color:#00966C" };
+                    return { ...node, data: { ...node.data, label: "Accepted", style: "background-color:#00966C" } };
                 }
                 return node;
             });
@@ -248,6 +250,8 @@
 
         graphs = !graphs
         console.log(graphs)
+
+        
 
     }
 
